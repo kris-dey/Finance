@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stock in stocks %}
+            <tr>
+                <td>{{ stock.userId }}</td>
+                <td>{{ stock.symbol }}</td>
+                <td>{{ stock.quantity }}</td>
+                <td>{{ stock.price }}</td>
+                <td>{{ stock.total }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    112.00 9,888.00
+{% endblock %}
